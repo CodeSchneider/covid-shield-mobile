@@ -47,11 +47,6 @@ const useNotificationPermissionStatus = (): [string, () => void] => {
 const Content = () => {
   const [exposureStatus, updateExposureStatus] = useExposureStatus();
   const [systemStatus, updateSystemStatus] = useSystemStatus();
-  const startSystem = useStartENSystem();
-
-  useEffect(() => {
-    startSystem();
-  }, [startSystem]);
 
   const network = useNetInfo();
 

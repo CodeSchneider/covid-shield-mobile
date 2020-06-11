@@ -84,7 +84,8 @@ export class ExposureNotificationService {
     this.started = true;
     try {
       await this.exposureNotification.start();
-    } catch (_) {
+    } catch (e) {
+      console.log('aaaaaa', e);
       // Noop because Exposure Notification framework is unavailable on device
       return;
     }
